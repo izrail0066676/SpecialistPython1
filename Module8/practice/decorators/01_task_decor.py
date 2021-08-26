@@ -7,3 +7,17 @@
 # *23*
 # ****
 # (кол-во звездочек зависит от длины возвращаемого значения)
+
+def new_decorator(function_to_decorate):
+    def wrapper():
+        function_to_decorate()
+        print("****")
+        print("*23*")
+        print("****")
+    return wrapper
+@new_decorator
+def simple_function():
+    print("********")
+    print("*Привет*")
+    print("********")
+simple_function()
